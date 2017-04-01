@@ -13,4 +13,4 @@
    7. @Output decorator
    8. Component Interaction - parent to child and child to parent.
    9. Model creation
-   10.Local Reference   
+   10. Local Reference   
