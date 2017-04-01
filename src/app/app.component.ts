@@ -6,5 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+    navHeaderValue = 1;
+
+  onNavHeaderChange(navHeaderValue : number) {
+    this.navHeaderValue = navHeaderValue;
+  }
+
+  isCatalog(){
+    if(this.navHeaderValue==1){
+      return true;
+    }
+    return false;
+  }
+
+  isShopping(){
+    if(this.navHeaderValue==2){
+      return true;
+    }
+    return false;
+  }
 }
