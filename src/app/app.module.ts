@@ -11,6 +11,7 @@ import { CatalogItemComponent } from './catalog/catalog-item/catalog-item.compon
 import { CatalogDetailComponent } from './catalog/catalog-detail/catalog-detail.component';
 import { ShoppingListComponent } from './shopping/shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping/shopping-edit/shopping-edit.component';
+import { AppDropDownDirective } from './shared/app-drop-down.directive';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ShoppingEditComponent } from './shopping/shopping-edit/shopping-edit.co
     CatalogItemComponent,
     CatalogDetailComponent,
     ShoppingListComponent,
-    ShoppingEditComponent
+    ShoppingEditComponent,
+    AppDropDownDirective
   ],
   imports: [
     BrowserModule,
