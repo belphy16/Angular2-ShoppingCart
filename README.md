@@ -8,9 +8,9 @@
    2. Property Binding
    3. Two Way Binding
    4. @ViewChild
-   5. @ContentChild
+   5. Dependency Injection
    6. @Input decorator
-   7. @Output decorator
-   8. Component Interaction - parent to child and child to parent.
+   7. Services
+   8. Component Interaction - through services.
    9. Model creation
    10. Local Reference   
