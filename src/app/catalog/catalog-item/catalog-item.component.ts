@@ -1,5 +1,6 @@
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 import {Catalog} from '../catalog.model';
+import {CatalogService} from '../catalog.service';
 @Component({
   selector: 'app-catalog-item',
   templateUrl: './catalog-item.component.html',
@@ -8,15 +9,16 @@ import {Catalog} from '../catalog.model';
 export class CatalogItemComponent implements OnInit {
 
  @Input('citem') catalogItem :Catalog;
- @Output('catalogitemout') catalogItemEmit = new EventEmitter<void>();
 
-  constructor() { }
+
+  constructor(private catalogService : CatalogService) { }
 
   ngOnInit() {
   }
 
   onClickCatalogItem() {
-    this.catalogItemEmit.emit();
+    this.catalogService.setCatalogSelected(this.catalogItem);
   }
+
 
 }

@@ -12,8 +12,7 @@ import { CatalogDetailComponent } from './catalog/catalog-detail/catalog-detail.
 import { ShoppingListComponent } from './shopping/shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping/shopping-edit/shopping-edit.component';
 import { AppDropDownDirective } from './shared/app-drop-down.directive';
-
-
+import {ShoppingService} from './shopping/shopping.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +30,7 @@ import { AppDropDownDirective } from './shared/app-drop-down.directive';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ShoppingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
