@@ -25,7 +25,7 @@ constructor(private shoppingService:ShoppingService){
 
 }
 getCatalogs() {
- return  this.catalogs.slice();
+ return  this.catalogs.slice();  //gives copy of array
 }
 
 setCatalogSelected(catalog: Catalog){
@@ -35,5 +35,10 @@ setCatalogSelected(catalog: Catalog){
 addToShoppingCart(items :ShoppingItem[]) {
   this.shoppingService.addShoppingItems(items);
 }
+
+ getCatalog(id : number) {
+   return this.catalogs[id];
+ }
+
 
 }

@@ -7,9 +7,9 @@ import {Component,Output,EventEmitter} from '@angular/core';
 })
 export class HeaderComponent {
 
-   @Output('nHeader') navHeaderSelected = new EventEmitter<number>();
+  // @Output('nHeader') navHeaderSelected = new EventEmitter<number>();
 
-   onClickNavHeader(header : number) {
-     this.navHeaderSelected.emit(header);
-   }
+  // onClickNavHeader(header : number) {
+  //   this.navHeaderSelected.emit(header);
+   //}
 }

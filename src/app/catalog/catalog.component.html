@@ -3,9 +3,6 @@
     <app-catalog-list></app-catalog-list>
   </div>
   <div class="col-md-7">
-    <app-catalog-detail
-    *ngIf="catalogItem; else InfoText"
-    [catalogDetail]="catalogItem"></app-catalog-detail>
-    <ng-template #InfoText>Please select catalog</ng-template>
+    <router-outlet></router-outlet>
   </div>
 </div>

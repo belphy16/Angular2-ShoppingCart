@@ -9,16 +9,14 @@ import {CatalogService} from '../catalog.service';
 export class CatalogItemComponent implements OnInit {
 
  @Input('citem') catalogItem :Catalog;
+ @Input('cindex') index : number;
 
-
-  constructor(private catalogService : CatalogService) { }
+  constructor() { }
 
   ngOnInit() {
   }
 
-  onClickCatalogItem() {
-    this.catalogService.setCatalogSelected(this.catalogItem);
-  }
+
 
 
 }

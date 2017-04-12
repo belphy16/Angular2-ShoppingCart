@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    navHeaderValue = 1;
+  /*  navHeaderValue = 1;
 
   onNavHeaderChange(navHeaderValue : number) {
     this.navHeaderValue = navHeaderValue;
@@ -24,5 +24,5 @@ export class AppComponent {
       return true;
     }
     return false;
-  }
+  }*/
 }
