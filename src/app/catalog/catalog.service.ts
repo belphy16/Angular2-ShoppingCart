@@ -8,7 +8,7 @@ import {ShoppingService} from './../shopping/shopping.service';
 export class CatalogService
 {
 
- catalogSelected = new EventEmitter<Catalog>();
+
 
 private  catalogs: Catalog[] = [
     new Catalog("catalog1","catalogDesc1",
@@ -32,9 +32,7 @@ getCatalogs() {
  return  this.catalogs.slice();  //gives copy of array
 }
 
-setCatalogSelected(catalog: Catalog){
-  this.catalogSelected.emit(catalog);
-}
+
 
 addToShoppingCart(items :ShoppingItem[]) {
   this.shoppingService.addShoppingItems(items);

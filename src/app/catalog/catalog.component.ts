@@ -10,20 +10,13 @@ import {CatalogService} from './catalog.service';
 })
 export class CatalogComponent implements OnInit {
 
-   catalogItem :Catalog;
 
-  constructor(private catalogService : CatalogService) { }
+
+  constructor() { }
 
   ngOnInit() {
-    this.catalogService.catalogSelected.subscribe(
-      (selectedCatalogItem : Catalog) => {
-        this.catalogItem = selectedCatalogItem;
-      }
-    );
+
   }
 
-  onSelectedCatalogItem(catalog:Catalog){
-    this.catalogItem = catalog;
-  }
 
 }
