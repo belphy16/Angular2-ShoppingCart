@@ -6,7 +6,7 @@ import {CatalogService} from './catalog.service';
   selector: 'app-catalog',
   templateUrl: './catalog.component.html',
   styleUrls: ['./catalog.component.css'],
-  providers : [CatalogService]
+
 })
 export class CatalogComponent implements OnInit {
 

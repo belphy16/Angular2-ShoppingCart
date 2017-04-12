@@ -10,7 +10,7 @@ export class CatalogService
 
  catalogSelected = new EventEmitter<Catalog>();
 
-private  catalogs : Catalog[] = [
+private  catalogs: Catalog[] = [
     new Catalog("catalog1","catalogDesc1",
     "https://firebearstudio.com/blog/wp-content/uploads/2016/01/Best-Node.JS-Books-1024x551.jpg",
     [new ShoppingItem('book1','10'),
@@ -20,6 +20,10 @@ private  catalogs : Catalog[] = [
     [new ShoppingItem('book3','30'),
     new ShoppingItem('book4','40')])
   ];
+
+  private  catalogs1 : Catalog[] = [
+
+    ];
 
 constructor(private shoppingService:ShoppingService){
 

@@ -8,8 +8,8 @@
         <ul class="nav navbar-nav">
         <!--  <li><a href="#" (click)="onClickNavHeader(1)">Catalog</a></li>
           <li><a href="#" (click)="onClickNavHeader(2)">Shopping</a></li>-->
-          <li routerLinkActive="active"><a routerLink="/catalog" >Catalog</a></li>
-          <li routerLinkActive="active"><a routerLink="/shopping" >Shopping</a></li>
+          <li routerLinkActive="active"><a style ="cursor:pointer;" (click)="catalog()" >Catalog</a></li>
+          <li routerLinkActive="active"><a style ="cursor:pointer;" routerLink="/shopping" >Shopping</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown" appDropdown>

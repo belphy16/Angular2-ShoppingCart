@@ -13,6 +13,7 @@ import { ShoppingListComponent } from './shopping/shopping-list/shopping-list.co
 import { ShoppingEditComponent } from './shopping/shopping-edit/shopping-edit.component';
 import { AppDropDownDirective } from './shared/app-drop-down.directive';
 import {ShoppingService} from './shopping/shopping.service';
+import {CatalogService} from './catalog/catalog.service';
 import {AppRoutingModule } from './app-routing.module';
 import { CatalogEditComponent } from './catalog/catalog-edit/catalog-edit.component';
 @NgModule({
@@ -34,7 +35,8 @@ import { CatalogEditComponent } from './catalog/catalog-edit/catalog-edit.compon
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ShoppingService],
+  //  providers : [CatalogService]
+  providers: [ShoppingService,CatalogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
