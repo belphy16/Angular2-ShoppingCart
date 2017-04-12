@@ -1,23 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import {ShoppingItem} from '../../shared/shoppingItem.model';
+import {ShoppingService} from '../shopping.service';
 @Component({
   selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
-  styleUrls: ['./shopping-list.component.css']
+  styleUrls: ['./shopping-list.component.css'],
 })
 export class ShoppingListComponent implements OnInit {
 
-  shoppingItems :  ShoppingItem[] = [
-    new ShoppingItem('item1','10')
-  ];
+  shoppingItems :  ShoppingItem[] = []
 
-  constructor() { }
+  constructor(private shoppingService:ShoppingService) { }
 
   ngOnInit() {
+    this.shoppingItems =  this.shoppingService.getShoppingItems();
+    this.shoppingService.newShoppingItem.subscribe(
+       (items :  ShoppingItem[]) => {
+         this.shoppingItems = items;
+       }
+    );
   }
 
-  onAddItem(item :ShoppingItem) {
-    this.shoppingItems.push(item);
-  }
+
 
 }

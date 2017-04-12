@@ -1,6 +1,7 @@
 import { Component, OnInit,Output, EventEmitter} from '@angular/core';
 import {Catalog} from '../catalog.model';
-
+import {CatalogService} from '../catalog.service';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 @Component({
   selector: 'app-catalog-list',
   templateUrl: './catalog-list.component.html',
@@ -8,23 +9,21 @@ import {Catalog} from '../catalog.model';
 })
 export class CatalogListComponent implements OnInit {
 
-  catalogs : Catalog[] = [
-    new Catalog("catalog1","catalogDesc1","https://firebearstudio.com/blog/wp-content/uploads/2016/01/Best-Node.JS-Books-1024x551.jpg")
+  catalogs : Catalog[] = [];
 
-  ];
 
-  @Output('catalogItemSelected') catalogSelected = new EventEmitter();
+  constructor(private catalogService : CatalogService,private route: ActivatedRoute,
+    private router: Router) {
 
-  constructor() {
-    var c = new Catalog("catalog2","catalogDesc2","https://firebearstudio.com/blog/wp-content/uploads/2016/01/Best-Node.JS-Books-1024x551.jpg");
-    this.catalogs.push(c);
   }
 
   ngOnInit() {
+    this.catalogs = this.catalogService.getCatalogs();
   }
 
-  onSelectCatalogItem(catalog: Catalog) {
-    this.catalogSelected.emit(catalog);
-  }
+addNewCatalog(){
+  this.router.navigate(["new"],{relativeTo:this.route});
+}
+
 
 }

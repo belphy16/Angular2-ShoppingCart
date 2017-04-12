@@ -1,9 +1,11 @@
-<app-header (nHeader)="onNavHeaderChange($event)"></app-header>
+<!-- <app-header (nHeader)="onNavHeaderChange($event)"></app-header>-->
+<app-header></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12" >
-      <app-catalog *ngIf="isCatalog()">  </app-catalog>
-      <app-shopping-list *ngIf="isShopping()"></app-shopping-list>
+  <!--    <app-catalog *ngIf="isCatalog()">  </app-catalog>
+      <app-shopping-list *ngIf="isShopping()"></app-shopping-list> -->
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
