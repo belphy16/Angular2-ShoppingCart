@@ -1,4 +1,4 @@
-# Angular2/4 - Shopping Cart
+# Angular 4 - Shopping Cart
  
     Shopping Cart application for viewing Catalog and adding shopping items.
 
