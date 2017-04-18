@@ -35,4 +35,9 @@ editCatalog(){
   this.router.navigate(["edit"],{relativeTo:this.route});
 }
 
+deleteCatalog(){
+  this.catalogService.deleteCatalog(this.index);
+  this.router.navigate(["../"],{relativeTo:this.route});
+}
+
 }
