@@ -17,6 +17,7 @@ import {ShoppingService} from './shopping/shopping.service';
 import {CatalogService} from './catalog/catalog.service';
 import {AppRoutingModule } from './app-routing.module';
 import { CatalogEditComponent } from './catalog/catalog-edit/catalog-edit.component';
+import { SearchPipePipe } from './catalog/search-pipe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { CatalogEditComponent } from './catalog/catalog-edit/catalog-edit.compon
     ShoppingListComponent,
     ShoppingEditComponent,
     AppDropDownDirective,
-    CatalogEditComponent
+    CatalogEditComponent,
+    SearchPipePipe
   ],
   imports: [
     BrowserModule,
