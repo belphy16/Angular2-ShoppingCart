@@ -19,13 +19,13 @@
    13. Template Forms
    14. Reactive Forms
    
-##Dependencies 
-   ### node 
-   ### angular cli
-   ### npm
+## Dependencies 
+   #### node 
+   #### angular cli
+   #### npm
    
-##To Start server 
-   ### ng serve  
+## To Start server 
+   #### ng serve  
    
-##To launch in browser
-   ### http://localhost:4200
+## To launch in browser
+   #### http://localhost:4200
